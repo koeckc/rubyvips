@@ -16,7 +16,10 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+test/big_plan.jpg
+test/medium_plan.jpg
+test/processed.jpg
+test/shrink.jpg
 /node_modules
 /yarn-error.log
 

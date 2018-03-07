@@ -1,24 +1,20 @@
+
+#
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#build container
+docker build -t rubyvips .
+docker run -it -t rubyvips
+docker run -v /Users/const/develop/viennarb/rubyvips:/app -it -t rubyvips 
 
-Things you may want to cover:
 
-* Ruby version
+time rake viennarb:shrink_vips
+18  time rake viennarb:shrink_magick
+time rake viennarb:shrink_magick
+time rake viennarb:shrink_vips
 
-* System dependencies
+/usr/bin/time -f "%P %M" rake viennarb:shrink_magick
 
-* Configuration
+4.02 seconds 130912 kbs
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ /usr/bin/time -f "%U seconds %M kbs" rake viennarb:shrink_vips

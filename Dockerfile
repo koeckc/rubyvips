@@ -8,7 +8,7 @@ MAINTAINER C.Köck <c.koeck@planradar.com>
 # Install dependencies:
 ENV LIBS_VERSION 8.6.1
 
-RUN apt-get update && apt-get install -qq -y build-essential git-core apt-transport-https sqlite3 libsqlite3-dev gnupg --fix-missing --no-install-recommends
+RUN apt-get update && apt-get install -qq -y time build-essential git-core apt-transport-https sqlite3 libsqlite3-dev gnupg --fix-missing --no-install-recommends
 RUN apt-get install -qq -y ghostscript imagemagick libmagickcore-dev libmagickwand-dev libgsf-1-dev libmagic1 file curl --fix-missing --no-install-recommends
 
 # Install libvips
@@ -57,3 +57,4 @@ RUN RAILS_ENV=development bundle exec spring binstub --all
 #RUN chmod a+rwx -R project-dir/system
 #RUN chmod a+rwx -R project-dir/system
 EXPOSE 3000
+ENTRYPOINT /bin/bash
