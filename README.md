@@ -11,4 +11,4 @@ docker run -v /Users/const/develop/viennarb/rubyvips:/app -it -t rubyvips
 /usr/bin/time -f "%U seconds %M kbs" rake viennarb:shrink_magick
 
 #create pyramid
-vips dzsave big_plan.jpg mydz --suffix .jpg[Q=90]
+vips dzsave worldmap.jpg mydz --suffix .jpg[Q=90]
